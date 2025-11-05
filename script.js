@@ -154,10 +154,10 @@
 // let age = prompt("Enter your age");
 // if (age === null) {
 //   console.error("Cancel daba diya");
-// } 
+// }
 // else if (age.trim() === "") {
 //   console.error("Bhai dhang se likhle");
-// } 
+// }
 // else {
 //   age = Number(age.trim());
 //   if (isNaN(age)) {
@@ -165,10 +165,10 @@
 //   }
 //    else if (age < 0) {
 //     console.error("Voting age minus me nhi hoti");
-//   } 
+//   }
 //   else if (age >= 18) {
 //     console.log(`Confirm voting age hai ${age}`);
-//   } 
+//   }
 //   else {
 //     console.log(`Voting ke liye chhota hai ${age}`);
 //   }
@@ -304,8 +304,16 @@
 //   }
 // }
 
-
 // 16. Print numbers between two user inputs
 // Input start and end using prompt() → print all between.
 
-let
+// let start = +prompt("enter first number:");
+// let end = +prompt("enter second number:");
+
+// if (start > end) {
+//   console.error("start cannot be bigger than end");
+// }
+
+// for (let i = start; i <= end; i++) {
+//   console.log(i);
+// }
