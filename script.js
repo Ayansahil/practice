@@ -317,3 +317,52 @@
 // for (let i = start; i <= end; i++) {
 //   console.log(i);
 // }
+
+// 17. Print only first 3 odd numbers from 1 to 20
+// Use loop. Stop with break after 3 odd prints.
+
+// let count = 0;
+// for (let i = 1; i <= 20; i++) {
+//   if (count === 3) break;
+//   if (i % 2 !== 0) {
+//     console.log(i);
+//     count++;
+//   }
+// }
+
+// 18. Ask user 5 numbers. Count how many are positive
+// Use loop + condition + counter.
+
+// let counter = 0;
+// for (i = 1; i <= 5; i++) {
+//   let askUser = +prompt("enter a number");
+//   if (askUser >= 0) {
+//     counter++;
+//   }
+// }
+// console.log(counter);
+
+// 19. ATM Simulator – Allow 3 withdrawals
+// Start with ₹1000 balance. Ask withdrawal amount 3 times.
+// If enough balance → deduct
+// Else → print “Insufficient balance”
+
+// let balance = 1000;
+// let flag = false;
+// let counter = 0;
+
+// while (balance > 0 && counter !== 3) {
+//   let withdraw = +prompt("enter withdrawal amount");
+//   counter++;
+//   if (withdraw <= balance) balance -= withdraw;
+//   else {
+//     flag = true;
+//     break;
+//   }
+// }
+
+// if (flag === true) {
+//   console.log("Insufficient balance");
+// }
+
+// console.log(`Balance: ${balance}`);
