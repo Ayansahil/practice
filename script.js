@@ -366,3 +366,57 @@
 // }
 
 // console.log(`Balance: ${balance}`);
+
+// Functions questions:-
+
+// Q1.Create a function that prints "Hello Javascript".
+
+// function hello() {
+//   console.log("Hello Javascript");
+// }
+// hello();
+
+//Q2. Create a function that takes two numbers as parameters and returns their sum.
+// function add(a,b){
+//     return a+b;
+// }
+
+// console.log(add(10,20));
+
+//Q3.Make a function with a default parameter that prints "Hi" followed by the name passed to it. If no name is passed, it should print "Hi Guest".
+
+// function greeting(a="Guest"){
+//     console.log(`Hi ${a}`);
+// }
+// greeting();
+// greeting("Ana");
+
+//Q4. Use rest parameters to make a function that adds unlimited numbers.
+//  (1)
+// function Addunlimited(...nums) {
+//     let sum=0;
+//   nums.forEach(function (val) {
+//     sum += val;
+// });
+// console.log(sum);
+// }
+// Addunlimited(1, 2, 3);
+
+// (2)
+
+// function Addunlimited(...nums) {
+//   let ans = nums.reduce(function (acc, val) {
+//     return acc + val;
+// }, 0);
+// console.log(ans);
+// }
+// Addunlimited(1, 2, 3,4);
+
+// Q5.Create an IIFE that prints "I run instantly!".
+
+// Q6.Make a nested function where the inner one prints a variable from the outer one.
+// Create an array of 5 fruits. Add a fruit to the end and another to the beginning.
+// Use a for loop to print all elements of an array.
+// Create an object person with keys name, age and city and print each key's value.
+// Use setTimeout to log "Time's up!" after 2 seconds.
+// Create an object person with keys name, age and city and print each key's value.
