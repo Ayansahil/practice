@@ -413,10 +413,52 @@
 // Addunlimited(1, 2, 3,4);
 
 // Q5.Create an IIFE that prints "I run instantly!".
+// (function(){
+//     console.log("I run instantly!");
+// }())
 
 // Q6.Make a nested function where the inner one prints a variable from the outer one.
-// Create an array of 5 fruits. Add a fruit to the end and another to the beginning.
-// Use a for loop to print all elements of an array.
-// Create an object person with keys name, age and city and print each key's value.
-// Use setTimeout to log "Time's up!" after 2 seconds.
-// Create an object person with keys name, age and city and print each key's value.
+
+// function parent() {
+//   let a = 20;
+//   function child() {
+//     console.log(a);
+//   }
+//   child();
+// }
+// parent();
+
+//Q7.Create an array of 5 fruits. Add a fruit to the end and another to the beginning.
+
+// let fruits=["Apple","Mango","Banana","Orange","Grapes"]
+// fruits.push("guava");
+// fruits.unshift("Pineapple");
+// console.log(fruits);
+
+//Q8.Use a for loop to print all elements of an array.
+
+// let arr=[1,2,3,4,5,6,7,8,9,10];
+// for (i=0;i<arr.length;i++){
+//     console.log(arr[i]);
+
+// }
+
+//Q9. Create an object person with keys name, age and city and print each key's value.
+
+// let person = {
+//   name: "Ayan",
+//   age: 23,
+//   city: "Bhopal",
+// };
+
+// // console.log(person);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.city);
+
+//Q10. Use setTimeout to log "Time's up!" after 2 seconds.
+
+// setTimeout(function () {
+//   console.log("Time's up!");
+// }, 2000);
+
