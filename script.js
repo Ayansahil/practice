@@ -499,32 +499,17 @@
 
 // 3. Write a function that uses object destructuring inside parameters to extract and print `name` `age`.
 
+function info({ name, age }) {
+  console.log(`Name: ${name}`);
+  console.log(`Age: ${age}`);
+}
 
+let person = {
+  name: "Ayan",
+  age: 23,
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+info(person);
 
 // 4. Demonstrate the difference between normal function and arrow function when used as object methods (the`this` issue).
 // 5. Given an array of numbers, use`map()` to create a new array where each number is squared.
