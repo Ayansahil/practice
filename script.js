@@ -367,7 +367,8 @@
 
 // console.log(`Balance: ${balance}`);
 
-// Functions questions:-
+// 🟢 Level 1 – Basic Function, Array & Object Code
+// Tasks (Easy)
 
 // Q1.Create a function that prints "Hello Javascript".
 
@@ -462,3 +463,74 @@
 //   console.log("Time's up!");
 // }, 2000);
 
+// 🟡 Level 2 – Functional Thinking & Logic Tasks
+// (Intermediate)
+
+// 1. Write a higher-order function`runTwice(fn)` that takes another function and executes it two times.
+
+// function runTwice(fn) {
+//   function inner() {
+//     fn();
+//     fn();
+//   }
+//   inner();
+// }
+// runTwice(function () {
+//   console.log("Hello");
+// });
+
+// 2. Create one pure function that always returns the same output for a given input, and one impure function using a global variable.
+
+// function pureFunction(x, y) {
+//   return x + y;
+// }
+
+// let ans = pureFunction(2, 3); // always returns 5 for same inputs
+// console.log(ans);
+
+// let globalVar = 10;
+
+// function impureFunction() {
+//   return globalVar + Math.random();
+// }
+
+// console.log(impureFunction());
+// console.log(impureFunction());
+
+// 3. Write a function that uses object destructuring inside parameters to extract and print `name` `age`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 4. Demonstrate the difference between normal function and arrow function when used as object methods (the`this` issue).
+// 5. Given an array of numbers, use`map()` to create a new array where each number is squared.
+// 6. Us`filter()` to get only even numbers from an array.
+// 7. Use`reduce()` to find the total salary from an array of numbers`[1000, 2000, 3000].
+// 8. Create an array of names and use `some()`and `every()` to test a condition (e.g., all names longer than
+// 3 chars).
+// 9. Create an object `user` and test the behavior of `Object.freeze()`and `Object.seal()` by adding/changing keys.
+// 10. Create a nested object (`user → address → city`) and access the city name inside it.
