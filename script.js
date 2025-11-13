@@ -469,11 +469,8 @@
 // 1. Write a higher-order function`runTwice(fn)` that takes another function and executes it two times.
 
 // function runTwice(fn) {
-//   function inner() {
-//     fn();
-//     fn();
-//   }
-//   inner();
+//   fn();
+//   fn();
 // }
 // runTwice(function () {
 //   console.log("Hello");
@@ -499,20 +496,51 @@
 
 // 3. Write a function that uses object destructuring inside parameters to extract and print `name` `age`.
 
-function info({ name, age }) {
-  console.log(`Name: ${name}`);
-  console.log(`Age: ${age}`);
-}
+// function info({ name, age }) {
+//   console.log(`Name: ${name}`);
+//   console.log(`Age: ${age}`);
+// }
 
-let person = {
-  name: "Ayan",
-  age: 23,
-};
+// let person = {
+//   name: "Ayan",
+//   age: 23,
+// };
 
-info(person);
+// info(person);
 
 // 4. Demonstrate the difference between normal function and arrow function when used as object methods (the`this` issue).
+
+// function normal() {
+//   person1 = {
+//     name: "Ayan Sahil",
+//     talk: function () {
+//       console.log(`Mera naam ${this.name} hai`);
+//     },
+//   };
+//   person1.talk();
+// }
+
+// let arrow = () => {
+//   person2 = {
+//     name: "Ayan Sahil",
+//     talk: () => {
+//       console.log(`Mera naam ${this.name} hai`);
+//     },
+//   };
+//   person2.talk();
+// };
+
+// normal();
+// arrow();
+
+//Ans:
+//(i)Object methods par Normal function use karte hai to this ki value aati hai object ke barabar
+//(ii)Object methods par Arrow function use karte hai to this ki value aati hai window ke barabar
+// “Arrow functions don’t have their own this, they inherit it from their outer scope.”
+
 // 5. Given an array of numbers, use`map()` to create a new array where each number is squared.
+
+
 // 6. Us`filter()` to get only even numbers from an array.
 // 7. Use`reduce()` to find the total salary from an array of numbers`[1000, 2000, 3000].
 // 8. Create an array of names and use `some()`and `every()` to test a condition (e.g., all names longer than
