@@ -540,10 +540,80 @@
 
 // 5. Given an array of numbers, use`map()` to create a new array where each number is squared.
 
+// let arr = [1, 2, 3, 4, 5];
+// let newArray = arr.map(function (val) {
+//   return(val * val);
+// });
+// console.log(newArray);
 
 // 6. Us`filter()` to get only even numbers from an array.
+
+// let arr = [
+//   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+// ];
+// let evenNumbers = arr.filter(function (val) {
+//   return val % 2 === 0;
+// });
+
+// console.log(evenNumbers);
+
 // 7. Use`reduce()` to find the total salary from an array of numbers`[1000, 2000, 3000].
+
+// let arr = [1000, 2000, 3000];
+
+// let totalSalary = arr.reduce(function (acc, val) {
+//   return acc + val;
+// },0);
+// console.log(totalSalary);
+
 // 8. Create an array of names and use `some()`and `every()` to test a condition (e.g., all names longer than
 // 3 chars).
+
+// let names=["Ana","Ayan","Aman","Rehan","Anas"];
+
+// let some=names.some(function(val){
+// return val.length>3;
+// });
+
+// let every=names.every(function(val){
+// return val.length>3;
+// });
+
+// if(some && every){
+//     console.log("All names are longer than 3 chars");
+// }
+// else if(some){
+//     console.log("Some names are longer than 3 chars");
+// }
+// else{
+//     console.log("No names are longer than 3 chars");
+// }
+
 // 9. Create an object `user` and test the behavior of `Object.freeze()`and `Object.seal()` by adding/changing keys.
+
+// let user = {
+//   name: "Ayan",
+//   age: 23,
+//   city: "Bhopal",
+// };
+
+// Object.freeze(user);
+// user.name = "Sahil"; user.country = "India"; will not change or not update
+// console.log(user);
+
+// Object.seal(user);
+// user.age = 24; // will update but not add any user.country = "India"; will not add new key
+// console.log(user);
+
 // 10. Create a nested object (`user → address → city`) and access the city name inside it.
+
+// let personInfo = {
+//   user: {
+//     name: "Ayan",
+//     address: {
+//       city: "Bhopal",
+//     },
+// },
+// };
+// let{city}=personInfo.user.address;
+// console.log(city);
