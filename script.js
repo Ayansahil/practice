@@ -617,3 +617,178 @@
 // };
 // let{city}=personInfo.user.address;
 // console.log(city);
+
+// SECTION 1: Advance Javascript, Objects and OOPS Thinking (Foundation)
+
+//i. Create a user object that stores name and email and has a login method which prints “User logged in”.
+//ii. Imagine you now have 5 users.
+// First, think how you would manage them without using a class.
+// Then convert the same logic using a class and observe how the code becomes cleaner. Write code for both approaches.
+
+//i.
+// let user = {
+//   name: "Ayan",
+//   email: "abc@g.com",
+//   login: function () {
+//     console.log("User logged in");
+//   },
+// };
+// user.login();
+
+//ii.
+// class User {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+
+//   loggedIn() {
+//     console.log("User logged in");
+//   }
+// }
+// let user1 = new User("Ayan", "abc@g.com");
+// let user2 = new User("Ayan", "abc@g.com");
+// let user3 = new User("Ayan", "abc@g.com");
+// let user4 = new User("Ayan", "abc@g.com");
+// let user5 = new User("Ayan", "abc@g.com");
+
+//2. Create a product object that stores name and price and has a method which returns the final price after discount.
+
+// let product = {
+//   name: "Maruti Suzuki",
+//   price: 10000,
+//   dicountedPrice: function () {
+//     return this.price - 6000;
+//   },
+// };
+// console.log(product.dicountedPrice());
+
+// The goal of this section is to understand why keeping data and behavior together makes code easier to manage.
+
+// SECTION 2: (Classes and Objects)
+
+//3. i.Create a Car class with the following:
+// brand
+// speed
+// a drive method that prints the car brand and speed
+
+//ii.Create two different car objects from the same class and verify that their data is different.
+
+// class Car {
+//   constructor(brand, speed) {
+//     this.brand = brand;
+//     this.speed = speed;
+//   }
+//   drive() {
+//     return this.brand + " - " + this.speed;
+//   }
+// }
+
+// let car1 = new Car("Thar", 200);
+// let car2 = new Car("Scorpio", 240);
+
+//4. Answer this in your own words:
+// If classes did not exist, how would you write this logic and what problems might occur when the project becomes large?
+
+// Problems with Large Projects:-
+// Code Duplication: Har object ke liye functions dobara likhne padenge.
+// Maintainability: Code ko maintain karna mushkil hoga kyunki har object ke liye alag functions honge.
+// Scalability: Project badhne par, code organize karna aur manage karna mushkil hoga.
+// Reusability: Code ko reuse karna mushkil hoga kyunki har object ke liye alag functions honge.
+// 💡 Tip
+// Classes use karne se code organized, reusable, aur maintainable banta hai, specially large projects ke liye.
+
+// SECTION 3: Constructor and this keyword :
+
+//5. Create" a Student class whose constructor accepts name and roll number.
+// Add a method introduce that prints both values.
+
+// Inside the constructor, set values using this.
+// Then try removing this and notice what error occurs and why.
+
+// class Student {
+//   constructor(name, rollNumber) {
+//     this.name = name;
+//     this.rollNumber =rollNumber;
+//   }
+//   introduce() {
+//     return this.name + " " + this.rollNumber;
+//   }
+// }
+// let st1 = new Student("Sahil", 23);
+
+// Create an object with two methods:
+// One method using a normal function
+// One method using an arrow function
+
+// Inside both, print this and observe the difference
+
+// let obj = {
+//   sayName: function () {
+//     console.log(this);
+//   },
+//   sayArrowName: () => {
+//     console.log(this);
+//   },
+// };
+// obj.sayName();
+// obj.sayArrowName();
+
+// The goal is to clearly understand how this works and when it global!
+
+// SECTION 4: Constructor Functions and Prototypes
+
+//6. Create a User constructor function (do not use class syntax).
+// Add a login method in two ways:
+// First, inside the constructor
+// Then, move the method to the prototype
+
+// function User() {
+//   this.name = "Ayan";
+// }
+// User.prototype.login = function () {
+//   console.log("loggin");
+// };
+// let an1 = new User();
+// console.log(an1);
+
+// Create two User objects and compare their login methods using equality.
+// Explain why the result is true or false.
+
+// function User(val) {
+//   this.name = val;
+// }
+
+// User.prototype.loggedin = function () {
+//   console.log("User loggedin");
+// };
+
+// let user1= new User("Ayan");
+// let user2= new User("Sahil");
+
+// The purpose here is to understand how prototypes help share behaviour on efficiently.
+
+// SECTION 5: call, apply, bind
+
+// Create a function that prints this.name.
+// Create an object that contains a name property.
+
+// Use call to run the function using the object
+// Use apply to run the function using the object
+// Use bind to create a new function and then call it
+// Borrow a method from one object and run it for another object using call.
+
+
+// function abcd(a,b,c) {
+//   console.log(this.name);
+// }
+// let obj = {
+//   name: "Ayan Sahil",
+// };
+// abcd.call(obj);
+// abcd.apply(obj,[1,2,3])
+// let bind= abcd.bind(obj);
+// bind();
+
+
+// The goal is to understand how this can be manually RA
