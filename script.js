@@ -778,7 +778,6 @@
 // Use bind to create a new function and then call it
 // Borrow a method from one object and run it for another object using call.
 
-
 // function abcd(a,b,c) {
 //   console.log(this.name);
 // }
@@ -790,5 +789,82 @@
 // let bind= abcd.bind(obj);
 // bind();
 
-
 // The goal is to understand how this can be manually RA
+
+// Level 1 (Simple Callback)
+
+//Q1. Ek function registerUser banao jo username input le aur callback ko call kare. Callback ka kaam hai “User registered” print karna.
+
+// function registerUser(username, cb) {
+//   console.log("Registering user...");
+//   setTimeout(() => {
+//     cb(username);
+//   }, 2000);
+// }
+
+// registerUser("Ayan", function (data) {
+//   console.log("User registered", data);
+// });
+
+// Level 2 (2-level nested callback)
+
+//Q2. Aisa code banao jisme:
+// registerUser → user register kare
+// phir callback me sendEmail call ho
+// sendEmail ka callback success message print kare
+
+// function registerUser(username, cb) {
+//   setTimeout(function () {
+//     console.log("user register...");
+//     cb(username);
+//   }, 2000);
+// }
+
+// function sendEmail(user, cb) {
+//   setTimeout(function () {
+//     console.log("send email to", user);
+//     cb(user);
+//   }, 3000);
+// }
+
+// registerUser("Ayan", function (user) {
+//   sendEmail(user, function () {
+//     console.log("all done ✅");
+//   });
+// });
+
+// Level 3 (3-level nested callback)
+//Q3. Aisa flow banao:
+// registerUser
+// sendEmail
+// saveToDatabase
+// Final callback: “Onboarding Complete” print kare
+
+// function registerUser(username, cb) {
+//   setTimeout(function () {
+//     console.log("user register...", username);
+//     cb(username);
+//   }, 1000);
+// }
+
+// function sendEmail(user, cb) {
+//   setTimeout(function () {
+//     console.log("send email to", user);
+//     cb(user);
+//   }, 1000);
+// }
+
+// function saveToDatabase(savedata, cb) {
+//   setTimeout(function () {
+//     console.log("user saved to database",savedata);
+//     cb(savedata);
+//   }, 2000);
+// }
+
+// registerUser("Ayesha", function (user) {
+//   sendEmail(user, function () {
+//     saveToDatabase(user, function () {
+//       console.log("Onboarding Complete✅");
+//     });
+//   });
+// });
